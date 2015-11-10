@@ -245,9 +245,13 @@ func PrepareFile() {
 	}
 
 	text := OpenDecryptFile(AesKey)
-	err := json.Unmarshal(text[len(AesKey):], &Records)
-	if err != nil {
-		panic(err)
+	if len(text) <= len(AesKey) {
+		Records = nil
+	} else {
+		err := json.Unmarshal(text[len(AesKey):], &Records)
+		if err != nil {
+			panic(err)
+		}
 	}
 
 	filePrepared = true
