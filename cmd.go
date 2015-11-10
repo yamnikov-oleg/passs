@@ -126,7 +126,7 @@ func ListFunc(args Args) {
 }
 
 func promt(s string) {
-	fmt.Printf("%19v", s)
+	fmt.Printf("%27v", s)
 }
 
 func InsertFunc(args Args) {

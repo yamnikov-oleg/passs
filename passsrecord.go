@@ -13,7 +13,7 @@ type PasssRecord struct {
 }
 
 func (pr *PasssRecord) PrintHead() {
-	fmt.Printf("%16v @ %v\n", pr.Username, pr.Website)
+	fmt.Printf("%24v @ %v\n", pr.Username, pr.Website)
 }
 
 func (pr *PasssRecord) LoadPassword() {
